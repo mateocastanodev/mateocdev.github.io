@@ -1,0 +1,144 @@
+/* Light & Dark Mode
+==================================================*/
+
+body.light-mode {
+  background-color: #ffffff;
+  color: #333333;
+}
+
+/* Switcher Button */
+.theme-switcher {
+  position: fixed;
+  top: 25px;
+  right: 25px;
+  width: 45px;
+  height: 45px;
+  background-color: #fff;
+  color: #252525;
+  border-radius: 50%;
+  border: none;
+  cursor: pointer;
+  z-index: 1001; /* Ensure it's above other elements */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 20px;
+  transition: all 0.3s ease;
+}
+
+.theme-switcher:hover {
+  transform: scale(1.1);
+}
+
+.theme-switcher .fa-sun-o {
+  display: none;
+}
+
+.theme-switcher .fa-moon-o {
+  display: block;
+}
+
+body.light-mode .theme-switcher {
+  background-color: #252525;
+  color: #ffffff;
+}
+
+body.light-mode .theme-switcher .fa-sun-o {
+  display: block;
+}
+
+body.light-mode .theme-switcher .fa-moon-o {
+  display: none;
+}
+
+/* General Light Mode Styles */
+body.light-mode .back-dark,
+body.light-mode .back-dark2,
+body.light-mode .royal_preloader,
+body.light-mode .menu-back.cbp-af-header.menu-have-back-color {
+  background-color: #f4f4f4;
+}
+
+body.light-mode h1,
+body.light-mode h2,
+body.light-mode h3,
+body.light-mode h4,
+body.light-mode h5,
+body.light-mode h6,
+body.light-mode p,
+body.light-mode .quote-sep h4,
+body.light-mode .left-footer p,
+body.light-mode .right-footer p {
+  color: #333333;
+}
+
+body.light-mode h1 span {
+  color: #007bff;
+}
+
+body.light-mode .social-mobile a,
+body.light-mode .icon-footer a {
+  color: #333;
+}
+
+body.light-mode #portfolio-filter ul li a {
+  color: #333;
+}
+
+body.light-mode #portfolio-filter ul li a.current {
+  color: #007bff;
+  border-bottom: 1px solid #007bff;
+}
+
+body.light-mode .logo img {
+  content: url("../images/logo-dark.png"); /* Assuming you have a dark logo */
+}
+
+/* Fallback for logo if dark version doesn't exist */
+@supports not (content: url("../images/logo-dark.png")) {
+  body.light-mode .logo img {
+    filter: invert(1);
+  }
+}
+
+body.light-mode .menu-container {
+  border-bottom: 1px solid #e0e0e0;
+}
+
+body.light-mode .portfolio-box-1 h3 {
+  color: #ffffff; /* Keep text over image white */
+}
+
+body.light-mode .about-wrap .about-icon svg rect,
+body.light-mode .about-wrap .about-icon svg polyline,
+body.light-mode .about-wrap .about-icon svg circle,
+body.light-mode .about-wrap .about-icon svg polygon,
+body.light-mode .about-wrap .about-icon svg line,
+body.light-mode .about-wrap .about-icon svg path {
+  stroke: #333333;
+}
+
+body.light-mode .footer-line {
+  background-color: #e0e0e0;
+}
+
+body.light-mode a:hover {
+  color: #007bff;
+}
+
+body.light-mode .link-down {
+  background-color: #333;
+}
+
+body.light-mode .list-social-footer li {
+  background-color: #e0e0e0;
+  border-color: #d1d1d1;
+}
+
+body.light-mode .list-social-footer li a {
+  color: #333;
+}
+
+body.light-mode .list-social-footer li:hover a {
+  color: #007bff;
+}
